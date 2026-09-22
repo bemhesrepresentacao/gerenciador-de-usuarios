@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================================================
+         PRÉVIA AO COMPARTILHAR O LINK (WhatsApp, Facebook, etc.)
+         ========================================================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Marcão da Graxa | Soluções que movem seu negócio!">
+    <meta property="og:description" content="Lubrificação de alta performance, proteção e manutenção de máquinas e equipamentos para operações agrícolas e industriais.">
+    <meta property="og:url" content="https://bemhesrepresentacao.github.io/Marcao-da-Graxa/">
+    <meta property="og:image" content="https://bemhesrepresentacao.github.io/Marcao-da-Graxa/Marc%C3%A3o%20da%20Graxa%20foto.png">
+    <meta property="og:image:alt" content="Marcão da Graxa">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Compatibilidade com outras plataformas -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marcão da Graxa | Soluções que movem seu negócio!">
+    <meta name="twitter:description" content="Lubrificação de alta performance, proteção e manutenção de máquinas e equipamentos.">
+    <meta name="twitter:image" content="https://bemhesrepresentacao.github.io/Marcao-da-Graxa/Marc%C3%A3o%20da%20Graxa%20foto.png">
+
+    <title>Marcão da Graxa | Soluções que movem seu negócio!</title>
+    <style>
+        :root {
+            --bg-dark: #070A0F;
+            --card-bg: #0F172A;
+            --blue-accent: #0052D4;
+            --green-accent: #22C55E;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: rgba(7, 10, 15, 0.95);
+            padding: 0.8rem 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--blue-accent);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--green-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(7, 10, 15, 0.85), rgba(7, 10, 15, 0.85)),
+                url('https://images.unsplash.com/photo-1789337504191-26e21fc90ac2?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 1rem 4rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #1E90FF, var(--green-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--blue-accent), var(--green-accent));
+            color: #fff;
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+        }
+
+        /* Seções */
+        section {
+            padding: 5rem 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--green-accent);
+            display: block;
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #1E293B;
+            border-top: 4px solid var(--blue-accent);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--green-accent);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: #38BDF8;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Filtro Flutuante de Produtos */
+        .floating-filter {
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 0.8rem 1rem;
+            border-radius: 30px;
+            border: 1px solid var(--blue-accent);
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .filter-btn {
+            background: transparent;
+            color: var(--text-light);
+            border: 1px solid #1E293B;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--blue-accent);
+            color: #fff;
+            border-color: var(--blue-accent);
+            box-shadow: 0 2px 10px rgba(0, 82, 212, 0.4);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(90deg, var(--blue-accent), var(--green-accent));
+            border-color: transparent;
+        }
+
+        /* Produtos / Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #1E293B;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .portfolio-item.hidden {
+            display: none !important;
+        }
+
+        /* Substituição de .portfolio-img para suportar o vídeo */
+        .portfolio-video {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid #1E293B;
+            background-color: #070A0F;
+        }
+
+        .portfolio-item h4 {
+            color: var(--green-accent);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .tag-btn {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            text-align: center;
+            flex: 1;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .tag-cotacao {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--green-accent);
+            border: 1px solid var(--green-accent);
+        }
+
+        .tag-cotacao:hover {
+            background: var(--green-accent);
+            color: #fff;
+        }
+
+        .tag-detalhes {
+            background: rgba(0, 82, 212, 0.2);
+            color: #38BDF8;
+            border: 1px solid var(--blue-accent);
+        }
+
+        .tag-detalhes:hover {
+            background: var(--blue-accent);
+            color: #fff;
+        }
+
+        /* Modal de Detalhes */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--blue-accent);
+            border-radius: 10px;
+            max-width: 650px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            color: var(--text-light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+        }
+
+        .modal-body h3 {
+            color: var(--green-accent);
+            margin-bottom: 1rem;
+        }
+
+        .modal-body h4 {
+            color: #38BDF8;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .modal-body ul {
+            margin-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .modal-body li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Contato & Rodapé */
+        .contact-section {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #0F172A 100%);
+            text-align: center;
+            border-top: 1px solid #1E293B;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background-color: #030508;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #1E293B;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .floating-filter {
+                top: 120px;
+            }
+        }
+    </style>
+    <!-- Logo na aba do navegador (favicon) -->
+    <link rel="icon" type="image/jpeg" href="Marc%C3%A3o%20da%20Graxa%20foto.png">
+    <link rel="shortcut icon" type="image/jpeg" href="Marc%C3%A3o%20da%20Graxa%20foto.png">
+    <link rel="apple-touch-icon" href="Marc%C3%A3o%20da%20Graxa%20foto.png">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="Marcão da Graxa foto.png" alt="Marcão da Graxa foto" class="logo-img">
+            <img src="Marcão da Graxa Nome.png" alt="Marcão da Graxa" class="logo-img">
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#atuacao">Atuação</a>
+            <a href="#projetos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Especialista em lubrificação, manutenção e soluções de alta performance para operações agrícolas e industriais.</h1>
+            <p>Soluções que movem seu negócio!</p>
+<p>Lubrificação de alta performance, proteção de equipamentos e soluções industriais que reduzem custos, aumentam a produtividade e prolongam a vida útil das máquinas.
+</p>
+            <a href="https://wa.me/5543988428240" target="_blank" class="btn">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Sobre o Marcão da Graxa</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted);">
+            <p>A <strong>Marcão da Graxa</strong> atua no segmento industrial e agrícola em <strong>Maringá-PR e região</strong>, oferecendo soluções em <strong>lubrificação de alta performance, proteção e manutenção de máquinas e equipamentos</strong>.</p>
+            <p>Nosso trabalho vai além da comercialização de produtos: buscamos <strong>entender a necessidade de cada operação e recomendar a solução mais adequada</strong>, contribuindo para aumentar a vida útil dos componentes, reduzir desgastes, falhas e paradas não programadas.</p>
+            <p>Trabalhamos com <strong>tecnologias de alto desempenho e excelente custo-benefício</strong>, buscando proporcionar <strong>maior proteção, eficiência operacional e redução dos custos de manutenção</strong>.</p>
+
+            <p>Nosso compromisso é transformar lubrificação em resultado: mais proteção para o seu equipamento, maior produtividade e economia para o seu negócio.</p>
+            <p><strong>Marcão da Graxa</strong> — Tecnologia em lubrificação, proteção e performance para o seu negócio.</p>
+
+        </div>
+    </section>
+
+    <section id="atuacao" style="background: #0B1120;">
+        <h2 class="section-title">Áreas de Atuação</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Lubrificantes</h3>
+                <p>Óleos e graxas de alta performance projetados para resistir a condições extremas de carga, temperatura e trabalho contínuo em frotas e indústrias.</p>
+            </div>
+            <div class="card">
+                <h3>Químicos Industriais</h3>
+                <p>Produtos especializados para manutenção, desengraxe, proteção anticorrosiva e otimização dos processos de produção fabril.</p>
+            </div>
+            <div class="card">
+                <h3>Soluções Sustentáveis</h3>
+                <p>Tecnologias focadas na redução de resíduos, economia de insumos e eficiência energética para operações ambientalmente responsáveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2 class="section-title">Produtos</h2>
+
+        <!-- Menu Flutuante de Categorias -->
+        <div class="floating-filter">
+            <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('graxa')">Graxa</button>
+            <button class="filter-btn" onclick="filterProducts('oleo')">Óleo</button>
+            <button class="filter-btn" onclick="filterProducts('aditivo')">Aditivo</button>
+            <button class="filter-btn" onclick="filterProducts('limpeza')">Limpeza</button>
+            <button class="filter-btn" onclick="filterProducts('protetivo')">Protetivo</button>
+            <button class="filter-btn" onclick="filterProducts('aerossol')">Aerossol</button>
+            <button class="filter-btn" onclick="filterProducts('tratamento-de-superficies')">Tratamento de Superfícies</button>
+            <button class="filter-btn" onclick="filterProducts('graxa-de-montagem')">Graxa de Montagem</button>
+        </div>
+
+        <!-- Renderização dinâmica do Grid de Produtos -->
+        <div class="portfolio-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Modal Dinâmico de Detalhes -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modalContent"></div>
+        </div>
+    </div>
+
+    <section id="contato" class="contact-section">
+    <section style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
+  <div style="text-align: center; margin-bottom: 20px;">
+    <h2 style="color: #333; margin-bottom: 8px;">Entre em Contato</h2>
+    <p style="color: #666; font-size: 1.1em; margin: 0;">Atendimento para Maringá – PR e Região</p>
+  </div>
+
+  <div style="position: relative; width: 100%; height: 450px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467812.5181710522!2d-51.9375!3d-23.421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eca1c8d76d8bcf%3A0xc3b83b38c2cb5799!2sMaring%C3%A1%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+</section>
+
+        <div class="contact-info">
+            <p><strong>WhatsApp:</strong> (43) 98842-8240</p>
+            <p><strong>E-mail:</strong> bemhesrepresentacao@gmail.com</p>
+            <p><strong>Localização:</strong> Maringá – PR e região</p>
+        </div>
+
+        <a href="https://wa.me/5543988428240" target="_blank" class="btn">Solicitar Atendimento</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bemhes Representação. Parceria • Confiança • Resultados.</p>
+    </footer>
+
+    <script>
+        // =========================================================================
+        // BANCO DE DADOS DOS PRODUTOS
+        // Modificado o campo 'imagem' para 'video' (insira o link/caminho do arquivo de vídeo)
+        // =========================================================================
+        const produtos = [{
+                id: "premalube",
+                categoria: "graxa",
+                nome: "Premalube / Premalube Red",
+                video: "Prermalube Pagina inicial.mp4",
+                descricaoCurta: "Graxa multipropósito de alta performance para cargas pesadas e extrema pressão. Formulação à base de complexo de alumínio.",
+                detalhesHtml: `
+                    <h3>Premalube / Premalube Red - Graxa Multipropósito EP</h3>
+                    <p>Graxa de complexo de alumínio de alta performance para cargas pesadas, extrema pressão e elevadas temperaturas (Graus NLGI #2, #1, Red #2, #1, #0, #00, #000 e Arctic #000).</p>
+                    <h4>Aplicações e Restrições:</h4>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Equipamentos de construção, mineração, agricultura, siderúrgicas e indústria geral (rolamentos, mancais, juntas universais e engrenagens).</li>
+                        <li><strong>Contraindicações:</strong> Não utilizar em rolamentos acima de 4.500 RPM ou em temperaturas contínuas superiores às especificações técnicas.</li>
+                    </ul>
+                    <h4>Principais Aditivos e Benefícios:</h4>
+                    <ul>
+                        <li><strong>Complexo de Alumínio:</strong> Excelente reversão ao calor e altíssima resistência à lavagem por água.</li>
+                        <li><strong>Bissulfeto de Molibdênio e Grafite:</strong> Proteção antidesgaste superior contra choques mecanicos e ambientes abrasivos.</li>
+                        <li><strong>Polímeros Adesivos:</strong> Fixam a graxa no ponto de aplicação evitando escorrimentos.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li><strong>Carga Timken OK:</strong> 60 a 65 lbs.</li>
+                        <li><strong>Atende especificações:</strong> Caterpillar MPG, Case 251H EP, Ford M1693A, MIL-G-23549C, USDA H2.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/J7JWicTo8ZA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Temperatura</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/7UA_P7auDZE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/8x6r6ORk6Tc"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "premalubefg",
+                categoria: "graxa",
+                nome: "Premalube FG",
+                video: "Prermalube FG Pagina inicial.mp4",
+                descricaoCurta: "Graxa branca de grau alimentício H1 (NLGI #1 e #2) com espessante de complexo de alumínio para indústrias alimentícias e farmacêuticas.",
+                detalhesHtml: `
+                    <h3>Premalube FG - Graxa de Grau Alimentício H1</h3>
+                    <p>Graxa branca multipropósito à base de complexo de alumínio (NLGI #1 e #2) especialmente formulada para a indústria alimentícia e farmacêutica.</p>
+                    <h4>Principais Benefícios:</h4>
+                    <ul>
+                        <li><strong>Classificação H1:</strong> Autorizada para contato incidental com alimentos.</li>
+                        <li><strong>Proteção Térmica:</strong> Ponto de gota de 237,8 °C (#1) / 264 °C (#2).</li>
+                        <li><strong>Resistência de Carga:</strong> Carga Timken OK de 20 Kg.</li>
+                    </ul>
+                    <h4>Aplicações e Normas:</h4>
+                    <ul>
+                        <li><strong>Aplicações:</strong> Máquinas de costura, correias transportadoras, rolamentos, mancais, esteiras e processadoras de alimentos.</li>
+                        <li><strong>Certificações:</strong> USDA H1, NSF, FDA 21 CFR 172.878 e 178.3620A, Óleo mineral USP.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/J7JWicTo8ZA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Temperatura</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/7UA_P7auDZE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/8x6r6ORk6Tc"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "premalubextreme",
+                categoria: "graxa",
+                nome: "Premalube Xtreme",
+                video: "Prermalube Xtreme Pagina inicial.mp4",
+                descricaoCurta: "Graxa de alta performance para aplicações severas com tecnologia de sulfonato de cálcio, blend sintético e Nano-Guard™.",
+                detalhesHtml: `
+                    <h3>Premalube Xtreme - Graxa de Alta Performance</h3>
+                    <p>Graxa multipropósito para aplicações severas formulada com complexo de sulfonato de cálcio, blend sintético e Nano-Guard™ (NLGI #1 e #2).</p>
+                    <h4>Desempenho Extremo:</h4>
+                    <ul>
+                        <li><strong>Elevadas Temperaturas:</strong> Ponto de gota de 302 °C a 321 °C; operacional até 260 °C (intermitente).</li>
+                        <li><strong>Extrema Pressão:</strong> Carga de solda 4-Ball superior a +800 kg e Timken OK de 70 a 75 lb.</li>
+                    </ul>
+                    <h4>Aplicações e Normas:</h4>
+                    <ul>
+                        <li><strong>Aplicações:</strong> Equipamentos industriais, siderúrgicas, fábricas de papel, mineração e ambientes expostos a alto volume de água.</li>
+                        <li><strong>Atende especificações:</strong> MIL-DTL-23549C, Caterpillar MPG, CASE 251H EP, GM 6031-M, DIN 51 825 / 51 818.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/J7JWicTo8ZA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Temperatura</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/7UA_P7auDZE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/8x6r6ORk6Tc"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "premalubextremegreen",
+                categoria: "graxa",
+                nome: "Premalube Xtreme Green",
+                video: "Prermalube Xtreme Green Pagina inicial.mp4",
+                descricaoCurta: "Graxa sulfonato de cálcio verde-azulada para ambientes extremos, alta velocidade (20.000 rpm) e resistência total à água salgada.",
+                detalhesHtml: `
+                    <h3>Premalube Xtreme Green - Graxa Verde-Azulada EP</h3>
+                    <p>Graxa de sulfonato de cálcio em blend sintético projetada para altíssimas rotações e ambientes submersos ou marinhos.</p>
+                    <h4>Principais Diferenciais:</h4>
+                    <ul>
+                        <li><strong>Alta Rotação:</strong> Desenvolvida para suportar rotações de até 20.000 RPM.</li>
+                        <li><strong>Carga e Impacto:</strong> Carga de solda 4-Ball de +800 kg e Carga Timken OK de 75 lb.</li>
+                        <li><strong>Proteção Marítima:</strong> Excepcional resistência contra lavagem por água e contaminação por água salgada.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Rolamentos de alta velocidade, bombas de turbina, injetoras de plástico, chassi de caminhões, tratores e máquinas agrícolas.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "premalubextremefood",
+                categoria: "graxa",
+                nome: "Premalube Xtreme Food Grade",
+                video: "Prermalube Xtreme Food Grade Pagina inicial.mp4",
+                descricaoCurta: "Graxa de grau alimentício H1 de sulfonato de cálcio para condições extremas, suportando cargas de solda de 800kg.",
+                detalhesHtml: `
+                    <h3>Premalube Xtreme Food Grade - H1 Severo</h3>
+                    <p>Graxa de sulfonato de cálcio de grau alimentício H1 (NLGI #2) para aplicações extremas que exigem alta durabilidade (dura de 2 a 5 vezes mais).</p>
+                    <h4>Especificações e Vantagens:</h4>
+                    <ul>
+                        <li><strong>Extrema Pressão H1:</strong> Suporta 800 kg na carga de solda 4-Ball e 65 lb na Timken OK.</li>
+                        <li><strong>Aplicações em Alta Rotação:</strong> Suporta até 20.000 RPM em equipamentos alimentícios.</li>
+                        <li><strong>Normas:</strong> USDA H1, FDA 21 CFR 178.3570, Requerimentos U.S.P.</li>
+                    </ul>
+                    <h4>Ideal para:</h4>
+                    <ul>
+                        <li>Recravadoras, transportadores, rolos, fornos e esteiras modulares de laticínios, cervejarias e frigoríficos.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/J7JWicTo8ZA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Temperatura</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/7UA_P7auDZE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/8x6r6ORk6Tc"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "dieselmate",
+                categoria: "aditivo",
+                nome: "Diesel Mate",
+                video: "Diesel Mate Pagina Inicial.mp4",
+                descricaoCurta: "O Diesel Mate é um aditivo completo desenvolvido para otimizar o desempenho do diesel, eficiente em S10 e biodiesel.",
+                detalhesHtml: `
+                    <h3>Diesel Mate - Aditivo para Diesel</h3>
+                    <p>Aditivo completo para otimização de combustível, compatível com diesel S10, S500 e biodiesel.</p>
+                    <h4>Benefícios Comprovados:</h4>
+                    <ul>
+                        <li><strong>Aumento de Rendimento:</strong> Melhora a eficiência operacional em até 10%.</li>
+                        <li><strong>Ganho de Cetano:</strong> Aumenta o índice em até 10% (elevação média de 3 a 4 pontos), facilitando a ignição.</li>
+                        <li><strong>Redução de Emissões:</strong> Reduz a fumaça preta e gases poluentes em média de 20%.</li>
+                        <li><strong>Proteção de Injetores:</strong> Lubrifica bombas e bicos contra o desgaste provocado pelo diesel de ultrabaixo teor de enxofre. Cumpre o teste Cummins L-10.</li>
+                    </ul>
+                    <h4>Ações dos Componentes:</h4>
+                    <ul>
+                        <li><strong>Desemulsificante:</strong> Separa a água acumulada para drenagem, evitando entupimento de filtros.</li>
+                        <li><strong>Desativador de Metais:</strong> Inibe o cobre e metais pesados de oxidarem o combustível.</li>
+                        <li><strong>Melhorador de Fluxo a Frio:</strong> Evita a gelificação do combustível em baixas temperaturas.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Limpeza e Cetano</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/0JIZ2HWVnJA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/bmafSJDqeDY"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Queima</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/jD_LglNi4Jo"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            
+            },
+            {
+                id: "certop",
+                categoria: "oleo",
+                nome: "Certop (80W90 / 85W140) & Industrial",
+                video: "Certop Pagina inicial.mp4",
+                descricaoCurta: "Óleos de alto desempenho para engrenagens e rolamentos formulados para resistir a condições severas em frotas e indústrias.",
+                detalhesHtml: `
+                    <h3>Linha Certop - Óleos para Engrenagens e Rolamentos</h3>
+                    <p>Óleos de alta performance desenvolvidos para durar até 4 vezes mais que os lubrificantes convencionais.</p>
+                    <h4>Certop Automotivo / Pesado (80W90 e 85W140):</h4>
+                    <ul>
+                        <li><strong>Aplicações:</strong> Diferenciais, transmissões manuais, eixos e caixas de engrenagens (API GL-3, GL-4, GL-5, SAE J2360, Mack GO-J, ZF TE-ML).</li>
+                        <li><strong>Diferenciais:</strong> Condicionadores de selos (evitam vazamentos), agentes adesivos (eliminam desgaste por partida a seco) e alta tolerância térmica (até 160 °C).</li>
+                    </ul>
+                    <h4>Certop Industrial (ISO 68 ao 680):</h4>
+                    <ul>
+                        <li><strong>Aplicações:</strong> Caixas de engrenagens industriais (dentes retos, helicoidais, sem-fim) e rolamentos industriais sob condições extremas.</li>
+                        <li><strong>Especificações:</strong> Atende DIN 51517 CLP, AGMA 2EP a 8EP, US Steel 224, David Brown.</li>
+                        <li><strong>Restrição:</strong> Não utilizar em engrenagens de bronze ou cobre.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Partida a Seco</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/73NwcWH8ta0"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Certop não espirra</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/yHsfapm8SdE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Demo Certop</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/FTktX9iCK90"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+           
+            },
+            {
+                id: "spectra",
+                categoria: "oleo",
+                nome: "Spectra Xtreme CI-4",
+                video: "Spectra Xtreme Pagina inicial.mp4",
+                descricaoCurta: "Óleo lubrificante de alto desempenho para motores diesel (SAE 15W40 / API CI-4) formulado com Molysol.",
+                detalhesHtml: `
+                    <h3>Spectra Xtreme CI-4 - Óleo para Motores Diesel</h3>
+                    <p>Óleo lubrificante de alto desempenho SAE 15W40 / API CI-4, formulado para suportar trabalhos pesados e proporcionar intervalos de troca estendidos.</p>
+                    <h4>Diferenciais e Tecnologia:</h4>
+                    <ul>
+                        <li><strong>Molysol:</strong> Composto de molibdênio sintético solúvel em óleo para proteção antidesgaste superior.</li>
+                        <li><strong>Neutralizadores de Ácidos (TBN Típico 14.9):</strong> Alta reserva alcalina para neutralização de ácidos, fazendo o óleo durar até 300% mais.</li>
+                        <li><strong>Alto Poder Detergente e Dispersante:</strong> Mantém borras, fuligens e vernizes em suspensão até o filtro, prevenindo depósitos no motor.</li>
+                    </ul>
+                    <h4>Aplicações e Desempenho:</h4>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Motores a diesel de alta potência de caminhões, tratores, ônibus e máquinas agrícolas.</li>
+                        <li><strong>Especificações Atendidas:</strong> API CI-4, ACEA E7-16, MB 228.3, MAN 3275, Volvo VDS-3, Cummins CES 20077, Renault RLD-2, Deutz DQC-III, Mack EO-M+.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "hoc",
+                categoria: "oleo",
+                nome: "HOC Xtreme (ISO 22, 32, 46, 68)",
+                video: "Hoc Xtreme Pagina Inicial.mp4",
+                descricaoCurta: "Óleo hidráulico monograu com Molysol para serviços pesados e extensão do intervalo de troca.",
+                detalhesHtml: `
+                    <h3>HOC Xtreme - Óleo Hidráulico de Alto Desempenho</h3>
+                    <p>Óleo hidráulico monograu com Molysol (disponível em ISO 22, 32, 46 e 68) desenvolvido para serviços pesados e operação prolongada.</p>
+                    <h4>Benefícios e Aditivação Especial:</h4>
+                    <ul>
+                        <li><strong>Vida Útil Prolongada:</strong> Estabilidade à oxidação superior a 6.000 horas (ASTM D943).</li>
+                        <li><strong>Condicionadores de Selos & Inibidores de Vazamento:</strong> Agentes que amaciam e causam dilatação controlada nos selos, evitando vazamentos.</li>
+                        <li><strong>MOLYSOL e Redutores de Atrito:</strong> Protegem contra desgaste severo e bombas de alta pressão.</li>
+                    </ul>
+                    <h4>Aplicações e Restrições:</h4>
+                    <ul>
+                        <li><strong>Indicado para:</strong> Bombas de palhetas, pistão e engrenagens em condições industriais e móveis severas.</li>
+                        <li><strong>Especificações Atendidas:</strong> Parker (Denison) HF-0/1/2, Eaton-Vickers M-2950-S, DIN 51524-2/3 (HM, HV), Cincinnati P68/P69/P70, Bosch Rexroth.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Inibidores de Vazamento</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/FS732MHspQo"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Condicionadores de Selos</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/FS732MHspQo"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Anti-Espuma</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/QdBwWU87P7w"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "oilall",
+                categoria: "oleo",
+                nome: "Oil-All Xtreme (SAE 10W30)",
+                video: "Oil-All Xtreme Pagina Inicial.mp4",
+                descricaoCurta: "Fluido universal multifuncional com blend sintético para equipamentos agrícolas e de construção pesada.",
+                detalhesHtml: `
+                    <h3>Oil-All Xtreme - Fluido Universal (SAE 10W30)</h3>
+                    <p>Fluido universal multifuncional formulado com blend sintético para transmissões, hidráulico e freios úmidos do setor agrícola e de construção.</p>
+                    <h4>Aplicações Múltiplas e Redução de Estoque:</h4>
+                    <ul>
+                        <li><strong>Sistemas Atendidos:</strong> Transmissões hidrostáticas, Tomada de Força (PTO/TF), freios úmidos, direção hidráulica e sistemas hidráulicos em geral.</li>
+                        <li><strong>Condicionadores de Freio:</strong> Reduzem a trepidação e ruídos nos freios banhados a óleo.</li>
+                        <li><strong>Ampla Faixa Térmica:</strong> Operação estável de -30 °C a 190 °C.</li>
+                    </ul>
+                    <h4>Especificações Atendidas:</h4>
+                    <ul>
+                        <li><strong>Homologações OEM:</strong> John Deere Hy-Gard J20C/D, Case-IH Hy-Tran Ultra, Massey Ferguson M-1145, Ford New Holland MAT 3540/134D, CAT TO-2/MTO, Volvo WB-101, ZF TE-ML 03E/05F/06K/17E/21F, API GL-4.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Inibidores de Vazamento</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/FS732MHspQo"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Condicionadores de Selos</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/FS732MHspQo"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Anti-Espuma</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/QdBwWU87P7w"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "resistx",
+                categoria: "protetivo",
+                nome: "Resist-X",
+                video: "Resist X Pagina Inicial.mp4",
+                descricaoCurta: "Protetivo anticorrosivo líquido que desloca umidade, lubrifica e forma uma película flexível contínua.",
+                detalhesHtml: `
+                    <h3>Resist-X - Protetivo Anticorrosivo</h3>
+                    <p>Protetivo anticorrosivo líquido para metais que desloca a umidade, lubrifica e forma uma película flexível de longa duração.</p>
+                    <h4>Características Principais:</h4>
+                    <ul>
+                        <li><strong>Película Flexível:</strong> Não resseca nem descasca com o tempo.</li>
+                        <li><strong>Ação Deslocante:</strong> Remove a umidade diretamente das superfícies metálicas.</li>
+                        <li><strong>Cor / Densidade:</strong> Castanho | 0.79 a 0.83 g/cm³.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Estocagem, montagem e transporte de máquinas, peças, chassis, rodas, terminais de baterias e equipamentos expostos à maresia ou tempo seco.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "enforce",
+                categoria: "limpeza",
+                nome: "Enforce",
+                video: "Enforce Pagina inicial.mp4",
+                descricaoCurta: "Limpador e desincrustante alcalino concentrado, biodegradável e não inflamável para remoção pesada.",
+                detalhesHtml: `
+                    <h3>Enforce - Desengraxante Alcalino Concentrado</h3>
+                    <p>Limpador e desincrustante alcalino de alta concentração, biodegradável e não inflamável.</p>
+                    <h4>Diferenciais Técnicos:</h4>
+                    <ul>
+                        <li><strong>Alta Diluição:</strong> Rende até 1:50 em água.</li>
+                        <li><strong>Potência Alcalina:</strong> pH (100%) entre 12,5 e 13,5 para rápida remoção de graxas pesadas.</li>
+                        <li><strong>Segurança:</strong> Biodegradável e saneante registrado na ANVISA/MS.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Equipamentos, tubulações, máquinas, moldes, pisos e superfícies laváveis industriais.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "grrr",
+                categoria: "limpeza",
+                nome: "Grrr",
+                video: "GRRR Pagina Inicial.mp4",
+                descricaoCurta: "Limpador desengraxante multipropósito espumante e penetrante, seguro para áreas alimentícias (NSF A1).",
+                detalhesHtml: `
+                    <h3>Grrr - Limpador Desengraxante Multipropósito</h3>
+                    <p>Poderoso limpador penetrante e espumante que não ataca superfícies delicadas nem deixa resíduos oleosos.</p>
+                    <h4>Especificações e Vantagens:</h4>
+                    <ul>
+                        <li><strong>Grau Alimentício:</strong> Certificado NSF A1 para uso em áreas de processamento de alimentos.</li>
+                        <li><strong>Segurança de Materiais:</strong> Pode ser utilizado em borrachas, plásticos, alumínio anodizado e vidros.</li>
+                        <li><strong>Diluição:</strong> 1:15 para sujeiras pesadas até 1:30 para limpeza leve.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Grelhas, peças industriais delicadas, máquinas pesadas, superfícies de alumínio polido e ambientes alimentícios.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "shinyside",
+                categoria: "limpeza",
+                nome: "Shiny-Side",
+                video: "Shiny Side Pagina Inicial.mp4",
+                descricaoCurta: "Limpador e abrilhantador alcalino para remoção de óxidos em serpentinas de ar condicionado e alumínio.",
+                detalhesHtml: `
+                    <h3>Shiny-Side - Limpador de Serpentinas e Alumínio</h3>
+                    <p>Limpador e abrilhantador alcalino espumante de alta penetração para remoção de óxidos.</p>
+                    <h4>Diferenciais:</h4>
+                    <ul>
+                        <li><strong>Ação Rápida:</strong> Tempo de ação de 3 a 5 minutos.</li>
+                        <li><strong>Rendimento:</strong> Diluição de até 1:25 em água.</li>
+                        <li><strong>Registro:</strong> Produto registrado na ANVISA.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Serpentinas de alumínio de ar condicionado, trocadores de calor, escadas, andaimes, rodas de alumínio não polidas e carrocerias de caminhões.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/KyxZyI2dPB4"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/H4YNhIzkYBs"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "electracoat",
+                categoria: "aerossol",
+                nome: "Electra Coat",
+                video: "Electra Coat Pagina Inicial.mp4",
+                descricaoCurta: "Revestimento emborrachado transparente, excelente para proteger conectores e terminais elétricos expostos da corrosão.",
+                detalhesHtml: `
+                    <h3>Electra Coat - Revestimento emborrachado transparente</h3>
+                    <p>excelente para proteger conectores e terminais elétricos expostos da corrosão.</p>
+                    <h4>Diferenciais:</h4>
+                    <ul>
+                        <li><strong>Função Principal:</strong> Protege, veda e isola superfícies metálicas contra umidade, maresia, sujeira e produtos químicos.</li>
+                        <li><strong>Desempenho Dielétrico:</strong> Oferece alta rigidez dielétrica (37.000 Volts para uma camada de 1/8"), sendo que o isolamento aumenta de acordo com a espessura.</li>
+                        <li><strong>Principais Benefícios:</strong> Acabamento transparente, resistente à abrasão, isola ruídos, é eficiente mesmo submerso, não congela e não escorre, goteja ou descasca.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Painéis elétricos, terminais de baterias, caixas de distribuição, estruturas automotivas, calhas e rachaduras de paredes.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/J7JWicTo8ZA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Temperatura</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/7UA_P7auDZE"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    <h4>Simulação de Água</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/8x6r6ORk6Tc"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "dri-lube-plus",
+                categoria: "aerossol",
+                nome: "Dri-Lube Plus",
+                video: "Dri-Lube Pagina inicial.mp4",
+                descricaoCurta: "Lubrificante seco multipropósito de bissulfeto de molibdênio.",
+                detalhesHtml: `
+                    <h3>Dri-Lube Plus - Lubrificante seco multipropósito de bissulfeto de molibdênio</h3>
+                    <p>Atende a indústrias farmacêuticas e têxteis, mineração, agricultura, construção civil, fundições, oficinas mecânicas, entre outros.</p>
+                    <h4>Diferenciais:</h4>
+                    <ul>
+                        <li><strong>Descrição e Propriedades:</strong> Cria uma película lubrificante seca de cor cinza escuro/preta que não é pegajosa, evitando a atração e o acúmulo de pó ou partículas abrasivas. Supera o grafite e o silicone ao oferecer propriedades antiatrito e antiengripante.</li>
+                        <li><strong>Resistência e Proteção:</strong> Suporta cargas pesadas (capacidade de carga de 500.000 PSI após a secagem), extremas pressões e temperaturas contínuas de -73 °C a 315,5 °C. Veda contra a umidade, prevenindo ferrugem e corrosão, além de ter alta resistência a água, óleos, bases e à maioria dos ácidos.</li>
+                        <li><strong>Sectores de Atuação:</strong> Atende a indústrias farmacêuticas e têxteis, mineração, agricultura, construção civil, fundições, oficinas mecânicas, entre outros.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Indicado para locais onde lubrificantes convencionais (óleos e graxas) não resistem ou onde se deve evitar sujeira. É ideal para pré-lubrificação de rolamentos, mancais e engrenagens, além de esteiras, roldanas, guias, correntes, talhas, empilhadeiras, tornos e prensas.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Dri-Lube Plus</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/HgOtB8yJqqg"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "lube-trac",
+                categoria: "aerossol",
+                nome: "Lube-Trac",
+                video: "Lub Trac Pagina Inicial.mp4",
+                descricaoCurta: "Lubrificante com Moly para engrenagens abertas.",
+                detalhesHtml: `
+                    <h3>Lube-Trac - Lubrificante com Moly para engrenagens abertas</h3>
+                    <p>Fórmula ultra pegajosa que promove máxima proteção e lubrificação para engrenagens abertas.</p>
+                    <h4>Diferenciais:</h4>
+                    <ul>
+                        <li><strong>Alta Adesividade:</strong> Possui fórmula ultra pegajosa que permanece nos dentes das engrenagens por mais tempo e forma uma película adesiva, promovendo relubrificação contínua e evitando partidas a seco.</li>
+                        <li><strong>Aditivo Solumol:</strong> Contém aditivo solúvel de molibdênio orgânico (Solumol) para suportar altas pressões em equipamentos pesados e garantir uma camada sólida de lubrificação.</li>
+                        <li><strong>Resistência:</strong> Não goteja, não espirra, não seca e não acumula, prevenindo desgaste excessivo, ferrugem e corrosão para aumentar a vida útil dos componentes.</li>
+                        <li><strong>Temperatura de Operação:</strong> Opera continuamente na faixa de -40 °C a 121 °C, e de forma intermitente até 260 °C.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Equipamentos e Componentes: Engrenagens abertas, cônicas e retas, fornos, prensas, guinchos, moinhos de bolas, escavadeiras dragline/elétricas, britadores, pinhões, rolos compactadores, perfuratrizes e vagões de transporte de escória.</li>
+                        <li><strong>Setores Atendidos:</strong> Mineração, metalurgia, indústrias manufatureiras e químicas, setor automotivo, agrícola e operações portuárias.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li>Viscosidade a 40 °C: 26,2 cSt</li>
+                        <li>Carga Timken: 60 lbs</li>
+                        <li>Ensaio 4-Ball (Carga de Solda): 400 kg</li>
+                        <li>Ensaio 4-Ball (Diâmetro de Marca): 0,4 mm</li>
+                        <li>Conteúdo Volátil: 47%</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Impacto</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/Mwk4XVlj_e4"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "dzlclean",
+                categoria: "aditivo",
+                nome: "DZL Clean",
+                video: "DZL Clean Pagina Inicial.mp4",
+                descricaoCurta: "O DZL Clean é um Condicionador de combustível diesel de aplicação única",
+                detalhesHtml: `
+                    <h3>DZL Clean - Condicionador de combustivel</h3>
+                    <p>Condicionador de combustível diesel de aplicação única.</p>
+                    <h4>Benefícios Comprovados:</h4>
+                    <ul>
+                        <li><strong>Limpeza e Ação Detergente:</strong> Limpa bombas de combustível, linhas e injetores, dispersando contaminantes e prevenindo borra, goma, turvamento, laca e carbonização (atende ao teste Cummins L-10).</li>
+                        <li><strong>Proteção Antidesgaste:</strong> Protege injetores e bombas contra o desgaste químico e mecânico causado pelo diesel de teor ultra baixo de enxofre.</li>
+                        <li><strong>Anticorrosivo:</strong> Contém inibidores que protegem tanques de armazenamento, tanques de equipamentos e linhas de combustível contra ferrugem e corrosão.</li>
+                        <li><strong>Desativador de Metais:</strong> Neutraliza traços de metais pesados (especialmente cobre), prevenindo reações que formam gomas e turvamento.</li>
+                        <li><strong>Sustentabilidade e Economia:</strong> Não contém enxofre e ajuda a reduzir as emissões.</li>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li><strong>Aplicações Típicas:</strong> Frotas, equipamentos de escavação e demolição, geradores de energia e frotas de serviços (hotéis, hospitais, universidades).</li>
+                        <li><strong>Setores Indicados:</strong> Transportadoras, pavimentação, construção civil, veículos de emergência e marinas.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li>Dosagem Típica: 1:1000</li>
+                        <li>Cor: Café.</li>
+                        <li>Grau API: 22,3.</li>
+                        <li>Viscosidade Cinemática a 40 °C: 48 cSt.</li>
+                        <li>Ponto de Fluidez: -40,0 °C.</li>
+                        <li>Ponto de Fulgor: 60,0 °C.</li>
+                        <li><strong>Temperatura de Operação:</strong> Mínima de -34,4 °C, máxima contínua de 48,8 °C e máxima intermitente de 60,0 °C</li>
+                    </ul>
+                `
+            },
+            {
+                id: "tanktonic",
+                categoria: "aditivo",
+                nome: "Tank Tonic",
+                video: "Tank Tonic Pagina Inicial.mp4",
+                descricaoCurta: "Biocida e conservante para combustível.",
+                detalhesHtml: `
+                    <h3>Tank Tonic - Biocida e conservante para Diesel</h3>
+                    <p>Biocida e conservante para combustível.</p>
+                    <h4>Benefícios Comprovados:</h4>
+                    <ul>
+                        <li><strong>Função Principal:</strong> Elimina praticamente 100% de bactérias e fungos em tanques de armazenamento de combustível (gasolina, diesel, óleo de aquecimento, entre outros).</li>
+                        <li><strong>Ação Dupla:</strong> Possui componentes que atuam tanto no combustível quanto na fase de água presente no tanque, garantindo proteção de longa duração.</li>
+                    </ul>
+                    <h4>Principais Benefícios:</h4>
+                    <ul>
+                        <li>Não contém enxofre e é eficiente em diesel de ultrabaixo teor de enxofre.</li>
+                        <li>Previne a decomposição microbiológica e a formação de ácidos que causam corrosão.</li>
+                        <li>Estende o intervalo de troca de filtros ao eliminar o limo e a biomassa que causam entupimentos.</li>
+                        <li>Melhora a eficiência de combustão mantendo bicos injetores limpos.</li>
+                        <li>É compatível com outros aditivos e aceito por fabricantes de motores.</li>
+                    <h4><strong>Dosagem Típica:</strong> 250 mL para cada 1.000 L de combustível.</h4>
+                    </ul>
+                    <h4>Aplicações:</h4>
+                    <ul>
+                        <li>Ideal para tanques de armazenamento, diesel rodoviário e marítimo, geradores, combustíveis de jato e armazenagens a longo prazo. Não deve ser utilizado em óleos de motor, lubrificantes ou fluidos hidráulicos.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "fire-up",
+                categoria: "aditivo",
+                nome: "Fire-UP!",
+                video: "Fire-UP! Pagina Inicial.mp4",
+                descricaoCurta: "O Fire-UP! é um Condicionador de combustível diesel para climas de temperaturas extremamente baixas.",
+                detalhesHtml: `
+                    <h3>Fire-UP! - Condicionador de combustível para Diesel</h3>
+                    <p>Condicionador de combustível diesel para climas de temperaturas extremamente baixas.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Baixo Ponto de Fluidez:</strong> Previne a gelificação reduzindo o ponto de fluidez em diversos tipos de combustível diesel e misturas.</li>
+                        <li><strong>Economia de Combustível:</strong> Diminui o desgaste do motor e depósitos, evitando a necessidade de manter veículos em marcha lenta prolongada durante paradas.</li>
+                        <li><strong>Proteção Contra Desgaste:</strong> Possui aditivos redutores de atrito que protegem bombas e injetores contra desgastes mecânicos e químicos causados por combustíveis com ultrabaixo teor de enxofre (o produto em si não contém enxofre).</li>
+                        <li><strong>Aumento da Vida Útil do Filtro:</strong> Ajuda a evitar o entupimento de filtros, diminuindo paradas não programadas e custos com manutenção/peças.</li>
+                        <li><strong>Fácil Aplicação:</strong> É estável para armazenamento a granel ou em tanques de bordo e possui baixo custo de aplicação.</li>
+                    </ul>
+                    <h4>Dosagem Recomendada:</h4>
+                    <ul>
+                        <li><strong>Dosagem Típica:</strong> 1:1000</li>
+                        <li><strong>Dosagem em Condições Severas:</strong> 1:500</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Projetado para frotas de transporte público e emergência, geradores de energia, equipamentos de construção civil, escavação, pavimentação e serviços para hotéis, hospitais e universidades.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "conquest",
+                categoria: "tratamento-de-superficies",
+                nome: "CONQUEST",
+                video: "Conquest Pagina Inicial.mp4",
+                descricaoCurta: "Polímero convertedor de ferrugem, inibidor de corrosão e primer preparador para superfícies metálicas.",
+                detalhesHtml: `
+                    <h3>CONQUEST - Polímero Convertedor de Ferrugem e Inibidor de Corrosão</h3>
+                    <p>O CONQUEST é uma emulsão à base de água sem solventes de petróleo, com baixa toxicidade e não inflamável, desenvolvida para transformar a ferrugem em uma barreira protetora de longa duração.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Converte a Ferrugem:</strong> Absorve partículas de ferrugem e as transforma em uma barreira inibidora de corrosão que estende a vida útil dos equipamentos.</li>
+                        <li><strong>Prepara a Superfície (Primer):</strong> Neutraliza o óxido e cria uma camada inerte entre o metal e o ar, preparando a superfície para a pintura. É compatível com a maioria das tintas.</li>
+                        <li><strong>Processo Simples:</strong> Pronto para uso, minimiza a preparação e tratamento da superfície, descartando procedimentos custosos de jateamento ou raspagem.</li>
+                        <li><strong>Não Inflamável:</strong> Formulado em emulsão aquosa, oferecendo maior segurança e baixa toxicidade durante a aplicação.</li>
+                        <li><strong>Alta Eficiência:</strong> Além de eliminar a ferrugem existente, transforma quimicamente a corrosão e bloqueia a continuidade do processo oxidativo.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li><strong>Aparência:</strong> Líquido amarelo claro</li>
+                        <li><strong>Odor:</strong> Característico</li>
+                        <li><strong>Densidade:</strong> 1,16 g/cm³</li>
+                        <li><strong>pH (a 100%):</strong> 0,2</li>
+                        <li><strong>Viscosidade:</strong> 400 - 800 mPas</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Aplicação Ideal:</strong> Superfícies oxidadas em tanques de armazenamento, equipamentos, maquinários, estruturas metálicas, barcos, vagões de trem, prateleiras, escadas, plataformas, chillers, torres de resfriamento e veículos.</li>
+                        <li><strong>Não Utilizar Em:</strong> Metais não oxidados, dias chuvosos ou sob exposição direta à água (evitar contato com água/chuva de 6 a 8 horas após a aplicação).</li>
+                        <li><strong>Cura e Acabamento:</strong> O tempo de cura completa varia de 3 a 7 dias. Para melhor desempenho, aplique uma camada de tinta de alta qualidade à base de óleo após a cura.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Indústria manufatureira, agricultura, oficinas de manutenção, construtoras, mineradoras, empresas de transporte e edifícios comerciais ou residenciais.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Instrução de uso:</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/Exbe1VT8O-w"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "system-purge",
+                categoria: "lubrificantes-e-manutencao",
+                nome: "SYSTEM PURGE",                
+                video: "System Purge Pagina Inicial.mp4",
+                descricaoCurta: "Óleo tipo flushing de alta tecnologia para limpeza e remoção de contaminantes com o equipamento em funcionamento.",
+                detalhesHtml: `
+                    <h3>SYSTEM PURGE - Óleo Tipo Flushing de Alta Tecnologia</h3>
+                    <p>O SYSTEM PURGE é um óleo tipo flushing desenvolvido para limpar completamente o sistema de lubrificação com o equipamento em pleno funcionamento, neutralizando ácidos residuais e removendo contaminantes sem prejudicar os componentes internos.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Super Detergência:</strong> Pacote de detergentes que removem com segurança vernizes, resinas, lodos, goma, cera, fuligem, carbono e outros contaminantes.</li>
+                        <li><strong>Evita Tempo de Parada:</strong> Age com o equipamento em funcionamento, eliminando a necessidade de interrupções não planejadas na produção.</li>
+                        <li><strong>Estende a Vida Útil:</strong> Neutraliza ácidos residuais, dissolve depósitos isolantes, reduz temperaturas operacionais, desgaste de componentes e pressão em sistemas hidráulicos.</li>
+                        <li><strong>Compatível e Versátil:</strong> Compatível com todo o sistema (engrenagens, bombas, válvulas, cilindros e linhas) e com óleos minerais e sintéticos.</li>
+                        <li><strong>Ecológico e Seguro:</strong> Não contém ácidos, cáusticos ou solventes clorados, não contribuindo com a emissão de descartes perigosos.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Modo de Usar:</strong> Adicione o produto ao óleo existente no equipamento, opere/circule conforme o tempo indicado, drene completamente o sistema e adicione o óleo novo.</li>
+                        <li><strong>Motores e Geradores:</strong> Diluição de 1:10 (1L para 10L de óleo) [ou 1:8 em uso severo]. Circulação de 30 minutos a 2 horas conforme o veículo/equipamento. Frequência a cada 19.300 km a 39.000 km (ou 300 a 750 horas).</li>
+                        <li><strong>Transmissões:</strong> Diluição de 1:20 (1L para 20L de óleo). Circulação de 3 a 24 horas. Frequência a cada 32.000 km ou 1.000 horas. <em>(Não utilizar em transmissões automáticas com fluido tipo ATF)</em>.</li>
+                        <li><strong>Caixas de Engrenagens:</strong> Diluição de 1:20 (1L para 20L de óleo). Circulação de 12 a 56 horas conforme tipo/tamanho. Frequência a cada 2.000 horas.</li>
+                        <li><strong>Sistemas Hidráulicos:</strong> Diluição de 1:30 (1L para 30L de óleo). Circulação de 4 a 8 horas. Frequência a cada 2.000 horas.</li>
+                        <li><strong>Compressores de Ar (Parafuso):</strong> Diluição de 1:30 (1L para 30L de óleo). Circulação de 1 a 2 horas. Frequência a cada 3.000 horas.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Manufatura industrial, plantas de geração de energia, indústria alimentícia, construção, mineração, agricultura, indústria papeleira, fábricas têxteis, siderúrgicas e fundições.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/2e7DBMXP9Do"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "lok-cease-20-20",
+                categoria: "graxa-de-montagem",
+                nome: "LOK-CEASE 20/20",
+                video: "Lok-Cease 20-20 Pagina Inicial.mp4",
+                descricaoCurta: "Pasta antiengripante de grau alimentício para aplicações industriais e de processamento de alimentos.",
+                detalhesHtml: `
+                    <h3>LOK-CEASE 20/20 - Pasta Antiengripante de Grau Alimentício</h3>
+                    <p>O LOK-CEASE 20/20 é uma pasta antiengripante de alta performance desenvolvida para vedações e lubrificação em condições severas de temperatura e pressão, atendendo às exigências das indústrias de processamento de alimentos, farmacêuticas e agrícolas.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Classificação NSF H1:</strong> Atende à norma FDA 21 CFR, sendo seguro para uso em áreas de processamento onde possa haver contato incidental com alimentos.</li>
+                        <li><strong>Temperaturas Extremas:</strong> Oferece lubrificação e vedação eficiente em temperaturas de até 1.260 °C sem derreter, endurecer ou evaporar.</li>
+                        <li><strong>Alta Resistência à Pressão:</strong> Suporta até 3.000 psi sem sair do local de aplicação, cumprindo e superando as especificações Scope e MIL Spec-A-907-E.</li>
+                        <li><strong>Previne Engripamento e Corrosão:</strong> Evita a oxidação e reduz significativamente os custos com substituição de peças, proporcionando fácil desmontagem.</li>
+                        <li><strong>Resistente à Lavagem:</strong> Suporta lavagem com água, água salgada e vapor, garantindo excelente proteção contra corrosão em ambientes externos e litorâneos.</li>
+                        <li><strong>Seguro e Compatível:</strong> Produto não corrosivo, não condutor, inerte aos metais, sem silicone ou Moly, reduzindo também a deterioração de borrachas.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li><strong>Estado Físico:</strong> Líquido (pasta semissólida opaca)</li>
+                        <li><strong>Cor:</strong> Branco</li>
+                        <li><strong>Densidade:</strong> 0,98</li>
+                        <li><strong>Voláteis / COV:</strong> 0% / 0 g/L</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Processadoras de alimentos, frigoríficos, envasadoras, padarias e confeitarias industriais, fábricas de papel e embalagem, indústria plástica, indústria têxtil e agricultura.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/mqBDaPsJbtA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "dylek-ps-ii",
+                categoria: "aerossol",
+                nome: "DYLEK PS II",
+                video: "Dylek PS II Pagina Inicial.mp4",
+                descricaoCurta: "Limpador e desengraxante em aerossol para equipamentos eletrônicos industriais.",
+                detalhesHtml: `
+                    <h3>DYLEK PS II - Limpador e Desengraxante para Equipamentos Eletrônicos</h3>
+                    <p>O DYLEK PS II é um limpador e desengraxante em aerossol de rápida evaporação, desenvolvido para a limpeza eficiente de componentes e equipamentos eletrônicos industriais sem a necessidade de desmontagem.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Eficiente e Sem Resíduos:</strong> Dissolve graxas, óleos e resíduos já na primeira aplicação sem deixar películas.</li>
+                        <li><strong>Fácil Aplicação:</strong> Basta pulverizar e deixar secar, sem necessidade de esfregar; acompanha tubo de extensão para locais de difícil acesso.</li>
+                        <li><strong>Versátil e Seguro:</strong> Seguro para ser utilizado em plásticos, borrachas, superfícies pintadas e circuitos eletrônicos sensíveis.</li>
+                        <li><strong>Segurança Ambiental e Operacional:</strong> Não corrosivo, não mancha e é isento de CFCs.</li>
+                    </ul>
+                    <h4>Especificações Técnicas:</h4>
+                    <ul>
+                        <li><strong>Aspecto:</strong> Líquido transparente</li>
+                        <li><strong>Cor:</strong> Incolor</li>
+                        <li><strong>Gravidade Específica:</strong> 0,68</li>
+                        <li><strong>% Volátil:</strong> 100%</li>
+                        <li><strong>Viscosidade:</strong> Semi-viscoso</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Alternadores, baterias, cabos, fusíveis, circuitos eletrônicos, motores elétricos, painéis de controle e equipamentos computadorizados.</li>
+                        <li><strong>Setores Atendidos:</strong> Manufatura, transportes, siderurgia, construção, mineração e agricultura.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de Dyllek PS II</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/6YeHDB1HFI0"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "voltz",
+                categoria: "aerossol",
+                nome: "VOLTZ",
+                video: "Voltz Pagina Inicial.mp4",
+                descricaoCurta: "Solvente desengraxante cítrico de alta rigidez dielétrica para limpeza de equipamentos mecânicos e elétricos.",
+                detalhesHtml: `
+                    <h3>VOLTZ - Solvente Desengraxante Cítrico de Alta Rigidez Dielétrica</h3>
+                    <p>O VOLTZ é um potente solvente desengraxante cítrico desenvolvido para a limpeza e remoção eficiente de graxa e sujeiras pesadas em equipamentos mecânicos e elétricos, oferecendo alta rigidez dielétrica e evaporação controlada sem danificar os componentes.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Poderoso Desengraxante:</strong> Sua potente fórmula dissolve até as sujeiras mais pesadas sem danificar a maioria dos plásticos.</li>
+                        <li><strong>Versátil:</strong> Pode ser utilizado para a limpeza de equipamentos mecânicos e elétricos, sem danificar os metais, isolantes, pinturas, borrachas e plásticos duros.</li>
+                        <li><strong>Agradável Fragrância:</strong> Contém compostos cítricos naturais que conferem uma agradável fragrância de laranja.</li>
+                        <li><strong>Alta Rigidez Dielétrica:</strong> Conta com uma rigidez dielétrica de até 40.000 volts, ideal para a limpeza de equipamentos elétricos.</li>
+                        <li><strong>Evaporação Controlada:</strong> Evapora lentamente, penetrando e removendo com maior eficiência a graxa e a sujeira.</li>
+                        <li><strong>Seguro:</strong> Não contém compostos clorados ou fluorados e não deixa resíduos.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Equipamentos elétricos, motores e geradores elétricos, reguladores de voltagem, equipamentos para empacotamento e rotulagem, e equipamentos mecânicos.</li>
+                        <li><strong>Não Utilizar Em:</strong> Motores ou equipamentos elétricos em funcionamento, controles eletrônicos de processos automatizados, superfícies quentes ou próximo a chamas e fontes de ignição, computadores, equipamentos de processamento de dados e caixas de fusíveis.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Fabricação industrial, transporte e frotas, siderúrgicas e fundições, gráficas, departamentos municipais e estaduais, construção e mineração, agricultura, escavação e demolição, serviços municipais, pavimentação de concreto e asfalto.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "nc-123-plus",
+                categoria: "aerossol",
+                nome: "NC-123 PLUS",
+                video: "NC 123 PLUS Pagina Inicial.mp4",
+                descricaoCurta: "Repelente de umidade para equipamentos elétricos que previne a oxidação e reduz paradas.",
+                detalhesHtml: `
+                    <h3>NC-123 PLUS - Repelente de Umidade para Equipamentos Elétricos</h3>
+                    <p>O NC-123 PLUS é um repelente de umidade projetado para proteger componentes e equipamentos elétricos contra a oxidação e água, formando uma película flexível e impermeável que lubrifica e reduz paradas de manutenção.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Protege os Componentes Elétricos:</strong> Reveste as superfícies com uma película flexível e impermeável que lubrifica e protege contra água, maresia e elementos corrosivos.</li>
+                        <li><strong>Previne Oxidação:</strong> Separa a água e a umidade, evitando a formação de ferrugem e corrosão.</li>
+                        <li><strong>Evaporação Rápida:</strong> Evapora rapidamente, proporcionando uma proteção eficiente e duradoura.</li>
+                        <li><strong>Seguro para Superfícies:</strong> Pode ser aplicado com segurança em superfícies pintadas.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Geradores e motores elétricos, equipamentos para construção, transmissores e receptores, interruptores, componentes de alta voltagem, equipamentos de precisão, relés, painéis elétricos e equipamentos de refrigeração.</li>
+                        <li><strong>Não Utilizar Em:</strong> Equipamentos energizados, além de equipamentos eletrônicos como televisores, computadores, transmissores ou receptores de rádio e placas de circuito impresso.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Refinarias, moinhos, envasadoras, escolas, restaurantes, agricultura, construção e hospitais.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Simulação de NC-123 Plus</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/wwQOFlKp83w"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "free",
+                categoria: "aerossol",
+                nome: "FREE",
+                video: "Free Pagina Inicial.mp4",
+                descricaoCurta: "Agente desengripante e lubrificante de uso geral para desengripar, proteger contra a ferrugem e lubrificar.",
+                detalhesHtml: `
+                    <h3>FREE - Agente Desengripante e Lubrificante de Uso Geral</h3>
+                    <p>O FREE é um agente desengripante e lubrificante de uso geral, ideal para desengripar componentes, proteger contra a ferrugem e lubrificar peças para reutilização.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Poderosa Ação Capilar:</strong> Permite desengripar em qualquer posição, atuando até mesmo em porcas e parafusos oxidados.</li>
+                        <li><strong>Lubrifica e Protege Contra a Ferrugem:</strong> Pode ser aplicado como lubrificante leve de uso geral.</li>
+                        <li><strong>Previne Quebras e Promove a Recuperação de Peças:</strong> Facilita a extração de componentes engripados por depósitos de ferrugem, corrosão e resíduos endurecidos, evitando quebras e possibilitando a restauração das peças.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Locais onde haja emperramento causado por corrosão, sujeira, gordura e outros resíduos. Pode ser usado em ferramentas de precisão, maquinário, dobradiças, parafusos e porcas.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Oficinas mecânicas, agricultura, indústria manufatureira, edifícios comerciais, construções, autoviações e portos.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "ar-19",
+                categoria: "aerossol",
+                nome: "AR-19",
+                video: "AR-19 Pagina Inicial.mp4",
+                descricaoCurta: "Emulsão protetiva abrilhantadora de superfícies para proteger, repelir umidade e sujeiras e promover brilho.",
+                detalhesHtml: `
+                    <h3>AR-19 - Emulsão Protetiva Abrilhantadora de Superfícies</h3>
+                    <p>O AR-19 é uma emulsão protetiva e abrilhantadora ideal para criar uma camada protetora invisível, prevenindo marcas e reduzindo o tempo e custo com manutenção e limpeza.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Protege e Repele:</strong> Forma uma camada protetora invisível e antiestática de alta duração, que age repelindo umidade, poeiras e sujeiras, além de prevenir marcas de dedos.</li>
+                        <li><strong>Fácil Aplicação:</strong> Aplicação direta na superfície, devendo ser espalhado com um pano seco e sem fiapos.</li>
+                        <li><strong>Resistente e Durável:</strong> Resiste a rachaduras e marcas, sem conter ceras, abrasivos ou ácidos. Não amarela com o tempo ou com aplicações constantes.</li>
+                        <li><strong>Econômico, Seguro e Eficiente:</strong> Reduz o custo de limpeza, não é tóxico e não deixa resíduos, películas grudentas ou depósitos.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Telas de computadores, acrílicos de máquinas CNC, vidros de fotocopiadoras e scanners, quadros brancos, superfícies metálicas brilhantes (como peças cromadas), veículos em exposição, móveis, espelhos, vinil, couro sintético, vitrines, lustres, luminárias e refletor.</li>
+                        <li><strong>Não Utilizar Em:</strong> Superfícies aquecidas ou superfícies que possam ficar escorregadias.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Concessionárias de carros, lojas e restaurantes, shopping centers, hotéis e motéis, escolas, hospitais e indústrias.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Instrução de Uso:</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/wpSfEPP9JUA"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>                    
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "etch-klenz",
+                categoria: "tratamento-de-superficies",
+                nome: "ETCH-KLENZ",
+                video: "ETCH-KLENZ Pagina Inicial.mp4",
+                descricaoCurta: "Desengraxante e condicionador de metais projetado para remover corrosão, ferrugem e oxidação, preparando a superfície para pinturas e revestimentos.",
+                detalhesHtml: `
+                    <h3>ETCH-KLENZ - Desengraxante e Condicionador de Metais</h3>
+                    <p>O ETCH-KLENZ é um desengraxante e condicionador de superfícies metálicas que limpa, remove a ferrugem e prepara os metais para uma melhor adesão de pinturas e revestimentos.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Condicionador de Superfície:</strong> Condiciona os metais enquanto limpa, marcando-os microscopicamente para garantir maior adesão de tintas e revestimentos.</li>
+                        <li><strong>Limpa e Remove a Corrosão:</strong> Elimina ferrugem, oxidação e corrosão sem necessidade de esfregar manualmente, agindo também como limpador de pré-soldagem e promovendo a passivação do metal.</li>
+                        <li><strong>Econômico e Fácil de Usar:</strong> Permite diluição de até 1:3 em água e realiza a desengraxe, marcação e condicionamento em uma única etapa.</li>
+                        <li><strong>Versátil:</strong> Pode ser aplicado em temperaturas variadas (altas ou baixas) e é compatível com diversos metais, como alumínio, ferro, aço, aço inoxidável, latão, cobre, cádmio e chumbo.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Superfícies metálicas que necessitam de limpeza, marcação e passivação. Aplicação feita com pincel, rolo ou imersão (diluição de 1 parte do produto para 3 partes de água). Peças que serão pintadas não necessitam de enxágue.</li>
+                        <li><strong>Não Utilizar Em:</strong> Alumínio fundido.</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Construção, gás e óleo, manufatura, setor marítimo, ferrovias, mineração e agricultura.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/RvHGhocLhW4"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            },
+            {
+                id: "certified-909",
+                categoria: "tratamento-de-superficies",
+                nome: "CERTIFIED 909",                
+                video: "CERTIFIED 909 Pagina Inicial.mp4",
+                descricaoCurta: "Composto para reparo e restauração de superfícies que oferece alta durabilidade, resistência superior e proteção contra abrasão e produtos químicos.",
+                detalhesHtml: `
+                    <h3>CERTIFIED 909 - Composto para Reparo e Restauração de Superfícies</h3>
+                    <p>O CERTIFIED 909 é um composto de alta durabilidade desenvolvido para o reparo e restauração de superfícies desgastadas e danificadas, proporcionando proteção duradoura e acabamento não escorregadio.</p>
+                    <h4>Principais Benefícios e Características:</h4>
+                    <ul>
+                        <li><strong>Oferece Proteção Duradoura:</strong> Apresenta alta resistência contra água, maresia, corrosão, abrasão, óleos, solventes, ácidos e produtos químicos.</li>
+                        <li><strong>Alta Durabilidade e Resistência:</strong> Não desgasta e nem marca. Após completa cura, pode chegar a ser quatro vezes mais resistente que o concreto e até seis vezes mais resistente à abrasão.</li>
+                        <li><strong>Não Escorregadio:</strong> Proporciona maior segurança para operações de tráfego intenso.</li>
+                        <li><strong>Restaura Superfícies Desgastadas e Danificadas:</strong> Ideal para prolongar a durabilidade de pisos, paredes, escadas, rampas, equipamentos e tubulações.</li>
+                    </ul>
+                    <h4>Instruções e Requisitos de Uso:</h4>
+                    <ul>
+                        <li><strong>Ideal Para Uso Em:</strong> Concreto, metal, pisos de madeira, fixação de equipamentos, escadas, degraus, rampas, calçadas, silos, tubulações de transporte de grãos, pisos de oficinas e áreas de produção.</li>
+                        <li><strong>Composição do Kit:</strong> Composto por Parte A (Resina), Parte B (Catalisador) e Parte C (Agregado).</li>
+                    </ul>
+                    <h4>Aplicações / Clientes:</h4>
+                    <ul>
+                        <li>Manufatureiras, empresas agrícolas, estacionamentos, parques, igrejas, construtoras, academias e centros esportivos, e centrais de distribuição e logística.</li>
+                    </ul>
+                    
+                    <div class="video-container">
+                    <h4>Assista o video</h4>
+                    <iframe 
+                    src="https://www.youtube.com/embed/bK8amZHdw5s"
+                    title="Vídeo Bemhes Representação"
+                    allowfullscreen>
+                    </iframe>
+                    </div>
+                    
+                    <style>
+                    .video-container {
+                    max-width: 900px;
+                    margin: 30px auto;
+                    aspect-ratio: 16 / 9;
+                        
+                    }
+                    
+                    .video-container iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    border-radius: 15px;
+                        
+                    }
+                    </style>
+                `
+            }
+        ];
+
+        // =========================================================================
+        // FUNÇÕES DO RENDERIZADOR E INTERAÇÃO
+        // =========================================================================
+
+        // Renderizar produtos no container
+        function renderProducts(filterCategory = 'todos') {
+            const container = document.getElementById('productsGrid');
+            container.innerHTML = '';
+
+            produtos.forEach(prod => {
+                const isHidden = (filterCategory !== 'todos' && prod.categoria !== filterCategory);
+                const encodedMsg = encodeURIComponent(`Olá, gostaria de uma cotação do produto ${prod.nome}.`);
+
+                const cardHtml = `
+                    <div class="portfolio-item ${isHidden ? 'hidden' : ''}" data-category="${prod.categoria}">
+                        <video class="portfolio-video" autoplay muted loop playsinline>
+                            <source src="${prod.video}" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                        <div>
+                            <h4>${prod.nome}</h4>
+                            <p>${prod.descricaoCurta}</p>
+                        </div>
+                        <div class="btn-group">
+                            <a href="https://wa.me/554388428240?text=${encodedMsg}" target="_blank" class="tag-btn tag-cotacao">Cotação</a>
+                            <button onclick="openModal('${prod.id}')" class="tag-btn tag-detalhes">Detalhes</button>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        // Filtrar botões
+        function filterProducts(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            renderProducts(category);
+        }
+
+        // Modal de detalhes
+        function openModal(productId) {
+            const prod = produtos.find(p => p.id === productId);
+            if (prod) {
+                document.getElementById('modalContent').innerHTML = prod.detalhesHtml;
+                document.getElementById('productModal').style.display = 'flex';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('todos');
+        });
+    </script>
+
+
+<script>
+/* ===== PERFIL DINÂMICO =====
+   O site lê o perfil selecionado por ?perfil=UUID no Supabase.
+   Substitua as duas constantes pelas credenciais do seu projeto.
+*/
+const SITE_SUPABASE_URL="COLOQUE_AQUI_A_URL_DO_SEU_SUPABASE";
+const SITE_SUPABASE_ANON_KEY="COLOQUE_AQUI_A_CHAVE_ANON_DO_SEU_SUPABASE";
+async function carregarPerfilDoGerenciador(){
+  if(!SITE_SUPABASE_URL.startsWith("http")) return;
+  const id=new URLSearchParams(location.search).get("perfil");
+  if(!id) return;
+  const client=supabase.createClient(SITE_SUPABASE_URL,SITE_SUPABASE_ANON_KEY);
+  const {data,error}=await client.from("profiles").select("name,city,email,phone,logo_url").eq("id",id).single();
+  if(error||!data) return;
+  document.title=(data.name||"Site")+" | Soluções que movem seu negócio!";
+  document.querySelectorAll(".logo-img").forEach((img,i)=>{ if(data.logo_url) img.src=data.logo_url; });
+  const hero=document.querySelector(".hero-content h1");
+  if(hero && data.name) hero.textContent=data.name;
+  const contact=document.querySelector(".contact-info");
+  if(contact){
+    contact.innerHTML=`<p><strong>WhatsApp:</strong> ${data.phone||""}</p>
+    <p><strong>E-mail:</strong> ${data.email||""}</p>
+    <p><strong>Localização:</strong> ${data.city||""}</p>`;
+  }
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a=>{
+    if(data.phone){
+      const digits=data.phone.replace(/\D/g,"");
+      a.href="https://wa.me/"+(digits.startsWith("55")?digits:"55"+digits);
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded",carregarPerfilDoGerenciador);
+</script>
+
+</body>
+
+</html>
