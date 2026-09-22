@@ -1,21 +1,34 @@
-# Gerenciador de usuários + site Marcão da Graxa
+# Gerenciador de vários usuários — sem Supabase
 
-## O que foi preparado
-- `gerenciador.html`: login/senha, criação de conta, vários perfis e edição de nome, cidade/localização, e-mail, WhatsApp e logo.
-- `site-dinamico.html`: versão do site enviado preparada para receber os dados de um perfil do Supabase.
-- `supabase.sql`: estrutura e políticas básicas do banco.
+## O que foi criado
 
-## Como funciona
-1. Crie um projeto no Supabase.
-2. Execute `supabase.sql` no SQL Editor.
-3. Em `gerenciador.html`, troque `SUPABASE_URL` e `SUPABASE_ANON_KEY`.
-4. Em `site-dinamico.html`, troque `SITE_SUPABASE_URL` e `SITE_SUPABASE_ANON_KEY`.
-5. Publique o `gerenciador.html` em um endereço separado.
-6. Publique `site-dinamico.html` como `index.html` no GitHub Pages.
-7. Cada perfil recebe um link no formato:
-   `https://SEU-SITE/?perfil=ID_DO_PERFIL`
+- `gerenciador-perfis/index.html`: login, cadastro, edição de perfil, logo, cidade/localização, e-mail, WhatsApp, título e slogan.
+- `site-marcao-da-graxa/index.html`: seu site anexado, preservando a estrutura/produtos e acrescentando carregamento do perfil pelo Firestore.
+- `gerenciador-perfis/firestore.rules`: regras de segurança.
+- O botão **Publicar no site** grava o perfil em `perfis/{slug}`.
+- O site abre o perfil com `?perfil=slug`.
 
-O botão "Transferir para o site" prepara os dados no navegador. A edição gravada no Supabase é a fonte que o site público consulta. Assim, não é necessário editar manualmente os 2.000+ linhas do site de produtos.
+Exemplo:
+`site-marcao-da-graxa/index.html?perfil=marcos`
+
+## Configuração do Firebase
+
+1. Crie um projeto no Firebase.
+2. Ative Authentication > Sign-in method > Email/Password.
+3. Crie o Firestore Database.
+4. Publique as regras de `firestore.rules`.
+5. Em Project settings > Your apps, crie um app Web e copie a configuração.
+6. Cole a mesma configuração nos dois `index.html`, nos objetos `firebaseConfig`.
+7. Para tornar um usuário administrador, depois do primeiro cadastro altere o documento:
+   `usuarios/UID_DO_USUARIO`
+   campo `role` = `admin`.
+
+## Publicação
+
+O portal e o site podem ficar no GitHub Pages. O Firestore fica como banco/ponte entre o gerenciador e o site.
+
+A logo é armazenada como imagem comprimida/data URL no documento do perfil. Para logos muito grandes, reduza o arquivo antes do upload.
 
 ## Importante
-O arquivo atual usa URL da logo. Para upload real de arquivos de imagem pelo próprio gerenciador, adicione um bucket público no Supabase Storage e um botão de upload; isso pode ser incluído na próxima versão.
+
+O arquivo do site recebido originalmente possui os produtos, vídeos, filtros e detalhes. Esta versão não remove esses dados; apenas adiciona a leitura do perfil publicado.
