@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Gestão de Usuários</title>
+    <style>
+        :root {
+            --bg-dark: #070A0F;
+            --card-bg: #0F172A;
+            --blue-accent: #0052D4;
+            --green-accent: #22C55E;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --danger: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Tela de Login */
+        #login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .login-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #1E293B;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .login-card h2 {
+            margin-bottom: 1.5rem;
+            color: var(--green-accent);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #020617;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--blue-accent), var(--green-accent));
+            color: #fff;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .error-msg {
+            color: var(--danger);
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Painel Administrativo */
+        #admin-panel {
+            display: none;
+            flex: 1;
+            padding: 2rem 5%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1E293B;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #1E90FF, var(--green-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logout-btn {
+            background: var(--danger);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .actions-bar {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-add {
+            background: var(--green-accent);
+            color: #070A0F;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Tabela de Usuários */
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid #1E293B;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #1E293B;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #0B1120;
+            color: var(--text-muted);
+        }
+
+        .user-logo-thumb {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #000;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-edit { background: #38BDF8; color: #000; padding: 0.4rem 0.8rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;}
+        .btn-delete { background: var(--danger); color: #fff; padding: 0.4rem 0.8rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;}
+        .btn-transport { background: #8B5CF6; color: #fff; padding: 0.4rem 0.8rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;}
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid var(--blue-accent);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 1.2rem;
+            color: var(--green-accent);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-cancel {
+            background: #475569;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TELA DE LOGIN -->
+    <div id="login-screen">
+        <div class="login-card">
+            <h2>Painel Restrito</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Usuário</label>
+                    <input type="text" id="userLogin" required placeholder="Ex: admin">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" id="passLogin" required placeholder="Ex: 123">
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <p id="loginError" class="error-msg"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- PAINEL DE GERENCIAMENTO -->
+    <div id="admin-panel">
+        <header>
+            <h1>Gerenciamento de Usuários e Perfis</h1>
+            <button class="logout-btn" onclick="logout()">Sair</button>
+        </header>
+
+        <div class="actions-bar">
+            <p style="color: var(--text-muted);">Gerencie as informações que serão aplicadas no site principal.</p>
+            <button class="btn-add" onclick="openUserModal()">+ Novo Usuário</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Nome</th>
+                        <th>Cidade / Localização</th>
+                        <th>E-mail</th>
+                        <th>Telefone / WhatsApp</th>
+                        <th>Ações</th>
+                    </tr>
+                ></thead>
+                <tbody id="userTableBody">
+                    <!-- Preenchido via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- MODAL DE ADICIONAR / EDITAR USUÁRIO -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Adicionar Novo Usuário</h3>
+            <form id="userForm">
+                <input type="hidden" id="userId">
+                <div class="form-group">
+                    <label>Nome do Usuário / Negócio</label>
+                    <input type="text" id="inputName" required>
+                </div>
+                <div class="form-group">
+                    <label>Cidade / Localização</label>
+                    <input type="text" id="inputLocation" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="inputEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" id="inputPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>URL ou Caminho da Logo (ex: Marcão da Graxa foto.png)</label>
+                    <input type="text" id="inputLogo" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="btn">Salvar</button>
+                    <button type="button" class="btn btn-cancel" onclick="closeUserModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Credenciais padrão de acesso ao painel
+        const ADMIN_USER = "admin";
+        const ADMIN_PASS = "123";
+
+        // Banco de dados simulado inicial armazenado no localStorage
+        let users = JSON.parse(localStorage.getItem('managed_users')) || [
+            {
+                id: 1,
+                name: "Marcão da Graxa",
+                location: "Maringá – PR e região",
+                email: "bemhesrepresentacao@gmail.com",
+                phone: "(43) 98842-8240",
+                logo: "Marcão da Graxa foto.png"
+            }
+        ];
+
+        // Controle de Login
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const u = document.getElementById('userLogin').value;
+            const p = document.getElementById('passLogin').value;
+
+            if (u === ADMIN_USER && p === ADMIN_PASS) {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('admin-panel').style.display = 'block';
+                renderTable();
+            } else {
+                document.getElementById('loginError').innerText = 'Usuário ou senha incorretos!';
+            }
+        });
+
+        function logout() {
+            document.getElementById('admin-panel').style.display = 'none';
+            document.getElementById('login-screen').style.display = 'flex';
+            document.getElementById('loginForm').reset();
+        }
+
+        // Renderizar Tabela
+        function renderTable() {
+            const tbody = document.getElementById('userTableBody');
+            tbody.innerHTML = '';
+
+            users.forEach(user => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><img src="${user.logo}" class="user-logo-thumb" onerror="this.src='https://via.placeholder.com/40'"></td>
+                        <td>${user.name}</td>
+                        <td>${user.location}</td>
+                        <td>${user.email}</td>
+                        <td>${user.phone}</td>
+                        <td>
+                            <div class="action-btns">
+                                <button class="btn-transport" onclick="transportData(${user.id})" title="Transportar para o site anexo">🚀 Usar no Site</button>
+                                <button class="btn-edit" onclick="editUser(${user.id})">Editar</button>
+                                <button class="btn-delete" onclick="deleteUser(${user.id})">Excluir</button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+            localStorage.setItem('managed_users', JSON.stringify(users));
+        }
+
+        // Abrir Modal
+        function openUserModal(user = null) {
+            document.getElementById('userModal').style.display = 'flex';
+            if (user) {
+                document.getElementById('modalTitle').innerText = 'Editar Usuário';
+                document.getElementById('userId').value = user.id;
+                document.getElementById('inputName').value = user.name;
+                document.getElementById('inputLocation').value = user.location;
+                document.getElementById('inputEmail').value = user.email;
+                document.getElementById('inputPhone').value = user.phone;
+                document.getElementById('inputLogo').value = user.logo;
+            } else {
+                document.getElementById('modalTitle').innerText = 'Adicionar Novo Usuário';
+                document.getElementById('userForm').reset();
+                document.getElementById('userId').value = '';
+            }
+        }
+
+        function closeUserModal() {
+            document.getElementById('userModal').style.display = 'none';
+        }
+
+        // Salvar Usuário (Adicionar ou Editar)
+        document.getElementById('userForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('userId').value;
+            const userData = {
+                id: id ? Number(id) : Date.now(),
+                name: document.getElementById('inputName').value,
+                location: document.getElementById('inputLocation').value,
+                email: document.getElementById('inputEmail').value,
+                phone: document.getElementById('inputPhone').value,
+                logo: document.getElementById('inputLogo').value
+            };
+
+            if (id) {
+                const index = users.findIndex(u => u.id === Number(id));
+                users[index] = userData;
+            } else {
+                users.push(userData);
+            }
+
+            closeUserModal();
+            renderTable();
+        });
+
+        function editUser(id) {
+            const user = users.find(u => u.id === id);
+            if (user) openUserModal(user);
+        }
+
+        function deleteUser(id) {
+            if (confirm('Deseja realmente excluir este usuário?')) {
+                users = users.filter(u => u.id !== id);
+                renderTable();
+            }
+        }
+
+        // =========================================================================
+        // FUNÇÃO DE TRANSPORTE PARA O SITE ANEXO (INJEÇÃO DE DADOS)
+        // =========================================================================
+        function transportData(id) {
+            const user = users.find(u => u.id === id);
+            if (!user) return;
+
+            // Salva o perfil ativo atual para que o site anexo possa ler automaticamente
+            localStorage.setItem('active_profile', JSON.stringify(user));
+
+            alert(`Informações de "${user.name}" transportadas com sucesso!\n\nAbrindo o site principal...`);
+            
+            // Abre o site anexo (assumindo que o arquivo principal se chame 'index.html')
+            window.open('index.html', '_blank');
+        }
+    </script>
+</body>
+</html>
