@@ -2031,6 +2031,59 @@
             renderProducts('todos');
         });
     </script>
+    <script>
+        // =========================================================================
+        // SUAS FUNÇÕES JÁ EXISTENTES (filtro, modal, etc.)
+        // =========================================================================
+        
+        // ... (código existente dos produtos) ...
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('todos');
+        });
+
+
+        // =========================================================================
+        // COLE ESTE BLOCO NO FINAL DA SUA TAG <SCRIPT> EXISTENTE:
+        // =========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            const activeProfile = JSON.parse(localStorage.getItem('active_profile'));
+            if (activeProfile) {
+                // Atualiza os dados de contato no rodapé da página
+                const contactParagraphs = document.querySelectorAll('.contact-info p');
+                if(contactParagraphs.length >= 3) {
+                    contactParagraphs[0].innerHTML = `<strong>WhatsApp:</strong> ${activeProfile.phone}`;
+                    contactParagraphs[1].innerHTML = `<strong>E-mail:</strong> ${activeProfile.email}`;
+                    contactParagraphs[2].innerHTML = `<strong>Localização:</strong> ${activeProfile.location}`;
+                }
+                
+                // Atualiza o link do botão flutuante de WhatsApp do Hero (início)
+                const heroWhatsappBtn = document.querySelector('.hero-content .btn');
+                if (heroWhatsappBtn && activeProfile.phone) {
+                    // Remove caracteres não numéricos para montar o link do wa.me
+                    const cleanPhone = activeProfile.phone.replace(/\D/g, '');
+                    heroWhatsappBtn.href = `https://wa.me/55${cleanPhone}`;
+                }
+
+                // Atualiza o botão de solicitação de atendimento na seção de contato
+                const contactSectionBtn = document.querySelector('.contact-section .btn');
+                if (contactSectionBtn && activeProfile.phone) {
+                    const cleanPhone = activeProfile.phone.replace(/\D/g, '');
+                    contactSectionBtn.href = `https://wa.me/55${cleanPhone}`;
+                }
+                
+                // Atualiza a logo principal do Header, se houver
+                const logoImg = document.querySelector('.logo-img');
+                if(logoImg && activeProfile.logo) {
+                    logoImg.src = activeProfile.logo;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
 
 </body>
 
